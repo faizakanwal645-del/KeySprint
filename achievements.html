@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements | KeySprint</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">Key<span>Sprint</span>.</a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="finger-guide.html">Finger Guide</a>
+            <a href="typing-test.html">Typing Test</a>
+            <a href="game-zone.html">Game Zone</a>
+            <a href="features.html">Features</a>
+            <a href="achievements.html">Achievements</a>
+        </nav>
+
+    </header>
+
+    <main>
+        <section class="achievements-section">
+            <p class="tagline">YOUR PROGRESS MATTERS</p>
+            <h2>🏆 Your Achievements</h2>
+
+            <p class="achievement-subtitle">
+                Complete typing challenges and unlock your badges!
+            </p>
+
+            <div class="achievement-container">
+
+                <div class="achievement-card">
+                    <div class="badge-icon">🚀</div>
+                    <h3>First Test</h3>
+                    <p>Complete your first typing test.</p>
+                    <span id="first-test-badge" class="badge-status">
+                        🔒 Locked
+                    </span>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="badge-icon">🎯</div>
+                    <h3>Accuracy Star</h3>
+                    <p>Achieve at least 95% accuracy in a test.</p>
+                    <span id="accuracy-badge" class="badge-status">
+                        🔒 Locked
+                    </span>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="badge-icon">⚡</div>
+                    <h3>Speed Master</h3>
+                    <p>Reach 40 words per minute.</p>
+                    <span id="speed-badge" class="badge-status">
+                        🔒 Locked
+                    </span>
+                </div>
+
+            </div>
+
+            <div style="margin-top:40px;">
+                <a href="typing-test.html" class="primary-button">
+                    Take Typing Test →
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 KeySprint. Practice today, improve tomorrow.</p>
+    </footer>
+
+    <script>
+        const badges = [
+            ["keysprintFirstBadge", "first-test-badge", "🏆 Unlocked"],
+            ["keysprintAccuracyBadge", "accuracy-badge", "🎯 Unlocked"],
+            ["keysprintSpeedBadge", "speed-badge", "⚡ Unlocked"]
+        ];
+
+        badges.forEach(function (badgeInfo) {
+            const savedStatus = localStorage.getItem(badgeInfo[0]);
+            const badgeElement = document.getElementById(badgeInfo[1]);
+
+            if (savedStatus === "unlocked") {
+                badgeElement.textContent = badgeInfo[2];
+                badgeElement.classList.add("unlocked");
+            }
+        });
+    </script>
+
+</body>
+</html>

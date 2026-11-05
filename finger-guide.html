@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeySprint | Finger Placement Guide</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .finger-guide {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 25px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .finger-guide h1,
+        .finger-guide h2 {
+            color: #c4b5fd;
+        }
+
+        .finger-guide .intro {
+            color: #d1d1e8;
+            line-height: 1.7;
+        }
+
+        .keyboard {
+            display: grid;
+            grid-template-columns: repeat(10, minmax(0, 1fr));
+            gap: 8px;
+            margin: 30px 0;
+        }
+
+        .key {
+            padding: 16px 2px;
+            border-radius: 9px;
+            color: white;
+            font-weight: bold;
+            background: #34344d;
+            border: 1px solid #555575;
+        }
+
+        .left-pinky { background: #be185d; }
+        .left-ring { background: #c2410c; }
+        .left-middle { background: #a16207; }
+        .left-index { background: #15803d; }
+        .right-index { background: #0e7490; }
+        .right-middle { background: #4338ca; }
+        .right-ring { background: #7e22ce; }
+        .right-pinky { background: #a21caf; }
+
+        .home-key {
+            outline: 3px solid #ffffff;
+            outline-offset: 2px;
+        }
+
+        .finger-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 15px;
+            margin-top: 25px;
+            text-align: left;
+        }
+
+        .finger-card {
+            padding: 18px;
+            border: 1px solid #6d4bc3;
+            border-radius: 14px;
+            background: #151529;
+        }
+
+        .finger-card h3 {
+            margin-top: 0;
+            color: #c4b5fd;
+        }
+
+        .finger-card p {
+            color: #dedeee;
+            line-height: 1.6;
+        }
+
+        .finger-guide .tip {
+            margin-top: 25px;
+            padding: 18px;
+            background: #24243d;
+            border-radius: 12px;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 600px) {
+            .finger-guide {
+                margin: 20px auto;
+                padding: 12px;
+            }
+
+            .keyboard {
+                gap: 4px;
+            }
+
+            .key {
+                padding: 12px 0;
+                font-size: 11px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <a href="#" class="logo">Key<span>Sprint</span>.</a>
+
+        <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="finger-guide.html">Finger Guide</a>
+    <a href="typing-test.html">Typing Test</a>
+    <a href="game-zone.html">Game Zone</a>
+    <a href="features.html">Features</a>
+    <a href="achievements.html">Achievements</a>
+</nav>
+
+    </header>
+
+    <section class="finger-guide">
+        <h1>⌨️ Finger Placement Guide</h1>
+
+        <p class="intro">
+            Learn the correct finger positions and build better
+            typing speed, accuracy and confidence!
+        </p>
+
+        <h2>Learn Your Keyboard</h2>
+
+        <p class="intro">
+            The coloured keys show which finger should press each key.
+            The highlighted A, S, D, F, J, K, L and ; keys are the
+            Home Row.
+        </p>
+<h2>Interactive Typing Tutor</h2>
+<p id="finger-instruction">
+    Ready to practice? Press Start Lesson to begin!
+</p>
+<div class="lesson-progress">
+    <div id="lesson-progress-bar"></div>
+</div>
+<p id="lesson-progress-text">Progress: 0 / 8 keys</p>
+<button id="start-lesson" type="button">Start Lesson</button>
+<div class="lesson-options">
+    <button class="lesson-choice" data-lesson="home">Home Row</button>
+    <button class="lesson-choice" data-lesson="upper">Upper Row</button>
+    <button class="lesson-choice" data-lesson="lower">Lower Row</button>
+</div>
+        <div class="keyboard">
+            <div class="key left-pinky">Q</div>
+            <div class="key left-ring">W</div>
+            <div class="key left-middle">E</div>
+            <div class="key left-index">R</div>
+            <div class="key left-index">T</div>
+            <div class="key right-index">Y</div>
+            <div class="key right-index">U</div>
+            <div class="key right-middle">I</div>
+            <div class="key right-ring">O</div>
+            <div class="key right-pinky">P</div>
+
+            <div class="key left-pinky home-key">A</div>
+            <div class="key left-ring home-key">S</div>
+            <div class="key left-middle home-key">D</div>
+            <div class="key left-index home-key">F</div>
+            <div class="key left-index">G</div>
+            <div class="key right-index">H</div>
+            <div class="key right-index home-key">J</div>
+            <div class="key right-middle home-key">K</div>
+            <div class="key right-ring home-key">L</div>
+            <div class="key right-pinky home-key">;</div>
+
+            <div class="key left-pinky">Z</div>
+            <div class="key left-ring">X</div>
+            <div class="key left-middle">C</div>
+            <div class="key left-index">V</div>
+            <div class="key left-index">B</div>
+            <div class="key right-index">N</div>
+            <div class="key right-index">M</div>
+            <div class="key right-middle">,</div>
+            <div class="key right-ring">.</div>
+            <div class="key right-pinky">/</div>
+        </div>
+        <div class="spacebar-key">
+    SPACEBAR
+</div>
+<p class="spacebar-hint">
+    Use your Left or Right Thumb to press Spacebar.
+</p>
+
+        <h2>Which Finger Should You Use?</h2>
+
+        <div class="finger-cards">
+            <div class="finger-card">
+                <h3>🩷 Left Pinky</h3>
+                <p>Press Q, A, Z and the left-side keys such as Shift.</p>
+            </div>
+
+            <div class="finger-card">
+                <h3>🧡 Left Ring Finger</h3>
+                <p>Press W, S and X.</p>
+            </div>
+
+            <div class="finger-card">
+                <h3>💛 Left Middle Finger</h3>
+                <p>Press E, D and C.</p>
+            </div>
+
+            <div class="finger-card">
+                <h3>💚 Left Index Finger</h3>
+                <p>Press R, T, F, G, V and B.</p>
+            </div>
+
+            <div class="finger-card">
+                <h3>🩵 Right Index Finger</h3>
+                <p>Press Y, U, H, J, N and M.</p>
+            </div>
+
+            <div class="finger-card">
+                <h3>💙 Right Middle Finger</h3>
+                <p>Press I, K and comma (,).</p>
+            </div>
+
+            <div class="finger-card">
+                <h3>💜 Right Ring Finger</h3>
+                <p>Press O, L and full stop (.).</p>
+            </div>
+
+            <div class="finger-card">
+                <h3>💗 Right Pinky</h3>
+                <p>Press P, semicolon (;), slash (/) and the right-side keys.</p>
+            </div>
+        </div>
+
+        <div class="tip">
+            <h2>⭐ Important Typing Tips</h2>
+            <p>
+                • Keep your fingers resting on A, S, D, F and J, K, L, ;.<br>
+                • Use both thumbs for the Spacebar.<br>
+                • Look at the screen instead of the keyboard.<br>
+                • Focus on accuracy before increasing speed.<br>
+                • Practise for 10–15 minutes every day.
+            </p>
+        </div>
+    </section>
+    <script>
+const startLesson = document.getElementById("start-lesson");
+const instruction = document.getElementById("finger-instruction");
+
+const lessons = {
+    home: [
+        { key: "a", finger: "Left little finger" },
+        { key: "s", finger: "Left ring finger" },
+        { key: "d", finger: "Left middle finger" },
+        { key: "f", finger: "Left index finger" },
+        { key: "j", finger: "Right index finger" },
+        { key: "k", finger: "Right middle finger" },
+        { key: "l", finger: "Right ring finger" },
+        { key: ";", finger: "Right little finger" },
+        { key: " ", finger: "Left or Right Thumb (Spacebar)" }
+    ],
+    upper: [
+        { key: "q", finger: "Left little finger" },
+        { key: "w", finger: "Left ring finger" },
+        { key: "e", finger: "Left middle finger" },
+        { key: "r", finger: "Left index finger" },
+        { key: "u", finger: "Right index finger" },
+        { key: "i", finger: "Right middle finger" },
+        { key: "o", finger: "Right ring finger" },
+        { key: "p", finger: "Right little finger" }
+    ],
+    lower: [
+        { key: "z", finger: "Left little finger" },
+        { key: "x", finger: "Left ring finger" },
+        { key: "c", finger: "Left middle finger" },
+        { key: "v", finger: "Left index finger" },
+        { key: "m", finger: "Right index finger" },
+        { key: ",", finger: "Right middle finger" },
+        { key: ".", finger: "Right ring finger" },
+        { key: "/", finger: "Right little finger" }
+    ]
+};
+
+let lessonKeys = lessons.home;
+
+let currentKey = 0;
+let lessonActive = false;
+const progressBar = document.getElementById("lesson-progress-bar");
+const progressText = document.getElementById("lesson-progress-text");
+
+function showTargetKey() {
+    document.querySelectorAll(".key.target-key").forEach(key => {
+        key.classList.remove("target-key");
+    });
+
+    const target = lessonKeys[currentKey];
+    const keys = document.querySelectorAll(".key");
+
+   const matchingKey = target.key === " "
+    ? document.querySelector(".spacebar-key")
+    : [...keys].find(key =>
+        key.textContent.trim().toLowerCase() === target.key
+    );
+
+    if (matchingKey) {
+        matchingKey.classList.add("target-key");
+    }
+
+    instruction.textContent =
+        `Press "${target.key.toUpperCase()}" using your ${target.finger}.`;
+        progressBar.style.width =
+    (currentKey / lessonKeys.length * 100) + "%";
+
+progressText.textContent =
+    `Progress: ${currentKey} / ${lessonKeys.length} keys`;
+}
+
+function startSelectedLesson(type) {
+    lessonKeys = lessons[type];
+    currentKey = 0;
+    lessonActive = true;
+
+    const lessonNames = {
+        home: "Home Row",
+        upper: "Upper Row",
+        lower: "Lower Row"
+    };
+
+    startLesson.textContent = "Restart Lesson";
+    instruction.textContent = lessonNames[type] + " lesson started!";
+
+    showTargetKey();
+}
+
+startLesson.addEventListener("click", () => {
+    startSelectedLesson("home");
+});
+
+document.querySelectorAll(".lesson-choice").forEach(button => {
+    button.addEventListener("click", () => {
+        startSelectedLesson(button.dataset.lesson);
+    });
+});
+
+document.addEventListener("keydown", event => {
+    if (!lessonActive) return;
+    if (event.key === " ") {event.preventDefault();}
+
+    const target = lessonKeys[currentKey];
+
+    const pressedKey = event.key === " " ? " " : event.key.toLowerCase();
+
+    if (pressedKey === target.key) {
+        currentKey++;
+
+        if (currentKey >= lessonKeys.length) {
+            lessonActive = false;
+
+            document.querySelectorAll(".key.target-key, .spacebar-key.target-key")
+                .forEach(key => key.classList.remove("target-key"));
+
+            progressBar.style.width = "100%";
+            progressText.textContent =
+                `Progress: ${lessonKeys.length} / ${lessonKeys.length} keys`;
+
+            instruction.textContent =
+                "Excellent! You completed the lesson!";
+            startLesson.textContent = "Practice Again";
+
+        } else {
+            showTargetKey();
+        }
+
+    } else {
+        const keyName = target.key === " " ? "SPACEBAR" : target.key.toUpperCase();
+
+        instruction.textContent =
+            `Try again! Press "${keyName}" with your ${target.finger}.`;
+    }
+});
+</script>
+
+</body>
+</html>

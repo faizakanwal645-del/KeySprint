@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Zone | KeySprint</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .game-zone {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .game-zone h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            color: #c4b5fd;
+            margin-bottom: 12px;
+        }
+
+        .game-zone .intro {
+            color: #c4b5fd;
+            margin-bottom: 35px;
+        }
+
+        .game-card {
+            background: #151428;
+            border: 1px solid #7048c8;
+            border-radius: 20px;
+            padding: 25px;
+            max-width: 720px;
+            margin: auto;
+            box-shadow: 0 0 25px rgba(139, 92, 246, 0.12);
+        }
+
+        .game-stats {
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .game-stats strong {
+            display: block;
+            color: #c4b5fd;
+            font-size: 1.5rem;
+        }
+
+        #game-word {
+            font-size: 2.7rem;
+            font-weight: bold;
+            color: #a78bfa;
+            margin: 25px 0;
+            overflow-wrap: anywhere;
+        }
+
+        #game-input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 15px;
+            border: 1px solid #8b5cf6;
+            border-radius: 10px;
+            background: #0b0b16;
+            color: white;
+            font-size: 1.1rem;
+            outline: none;
+        }
+
+        .game-btn {
+            padding: 12px 24px;
+            margin: 12px 5px 0;
+            border: none;
+            border-radius: 9px;
+            background: #8b5cf6;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .game-btn:hover {
+            background: #7048c8;
+        }
+
+        #game-message {
+            min-height: 28px;
+            color: #c4b5fd;
+            margin-top: 18px;
+        }
+
+        .game-help {
+            color: #c4b5fd;
+            margin-top: 20px;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">Key<span>Sprint</span>.</a>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="finger-guide.html">Finger Guide</a>
+        <a href="typing-test.html">Typing Test</a>
+        <a href="game-zone.html">Game Zone</a>
+        <a href="features.html">Features</a>
+        <a href="achievements.html">Achievements</a>
+    </nav>
+</header>
+
+<main class="game-zone">
+    <p class="tagline">LEARN • PLAY • IMPROVE</p>
+    <h1>🎮 Typing Game Zone</h1>
+    <p class="intro">
+        Challenge yourself, type the words correctly and beat your best score!
+    </p>
+
+    <section class="game-card">
+        <h2>⚡ Quick Word Challenge</h2>
+        <p>Type the displayed word before time runs out.</p>
+
+        <div class="game-stats">
+            <div>Time Left<strong id="game-time">30 sec</strong></div>
+            <div>Score<strong id="game-score">0</strong></div>
+            <div>Best Score<strong id="game-best">0</strong></div>
+        </div>
+
+        <div id="game-word">READY?</div>
+
+        <input
+            type="text"
+            id="game-input"
+            placeholder="Type the word here..."
+            autocomplete="off"
+            disabled
+        >
+
+        <div>
+            <button type="button" class="game-btn" id="game-start">
+                Start Game
+            </button>
+            <button type="button" class="game-btn" id="game-restart">
+                Play Again
+            </button>
+        </div>
+
+        <p id="game-message" aria-live="polite">
+            Press Start Game when you're ready!
+        </p>
+    </section>
+
+    <p class="game-help">
+        Tip: Accuracy first, then speed. Keep practising! 💜
+    </p>
+</main>
+
+<!-- Typing Race Game -->
+<section class="race-game">
+    <h2>🏁 Typing Race</h2>
+    <p>Type the sentence correctly to move your racing car!</p>
+
+    <div class="race-track">
+        <div id="race-car">🏎️</div>
+        <div class="finish-line">🏁</div>
+    </div>
+
+    <p id="race-text">
+        Practice makes progress every day.
+    </p>
+
+    <textarea
+        id="race-input"
+        placeholder="Type the sentence here..."
+        disabled
+    ></textarea>
+
+    <div class="race-stats">
+        <p>Progress: <span id="race-progress">0</span>%</p>
+        <p>Time: <span id="race-time">30</span>sec</p>
+    </div>
+
+    <button id="race-start" type="button">Start Race</button>
+    <button id="race-reset" type="button">Restart</button>
+
+    <p id="race-message">Ready to race? 🚦</p>
+</section>
+<!-- Falling Letters Game -->
+<section class="falling-game">
+    <h2>🎯 Falling Letters</h2>
+    <p>Type the falling letters before time runs out!</p>
+
+    <div id="falling-arena">
+        <div id="falling-letter">A</div>
+    </div>
+
+    <div class="falling-stats">
+        <p>Score: <span id="falling-score">0</span></p>
+        <p>Time: <span id="falling-time">30</span>sec</p>
+    </div>
+
+    <input
+        type="text"
+        id="falling-input"
+        placeholder="Type the letter here..."
+        autocomplete="off"
+        disabled
+    >
+
+    <div>
+        <button id="falling-start" type="button">
+            Start Game
+        </button>
+
+        <button id="falling-restart" type="button">
+            Restart
+        </button>
+    </div>
+
+    <p id="falling-message">Ready? Let's play! 🚀</p>
+</section>
+<footer>
+    <p>© 2026 KeySprint. Practice today, improve tomorrow.</p>
+</footer>
+<script src="game-zone.js"></script>
+</body>
+</html>

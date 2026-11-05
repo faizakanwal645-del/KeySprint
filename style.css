@@ -1,0 +1,1182 @@
+/* ===== GENERAL STYLING ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0b16;
+    color: #f5f3ff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/* ===== NAVIGATION BAR ===== */
+
+.navbar {
+    width: 100%;
+    min-height: 82px;
+    padding: 18px 8%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content:space-between;
+    gap: 25px;
+    background: #10101f;
+    border-bottom: 1px solid #25243d;
+}
+.navbar nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #a78bfa;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar nav a {
+    color: #c4c0d8;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+.navbar nav a {
+transition: all 0.3s ease;
+border-radius: 8px;
+padding: 8px 12px;
+}
+
+.navbar nav a {
+color: #ffffff;
+font-weight: 700;
+font-size: 15px;
+transition: all 0.3s ease;
+border-radius: 8px;
+padding: 8px 12px;
+text-decoration: none;
+}
+
+.navbar nav a:hover {
+color: #ffffff;
+background-color: #7028c5;
+font-weight: 800;
+box-shadow: 0 0 12px rgba(112, 40, 197, 0.5);
+}
+
+.navbar nav a:hover {
+    color: #b69cff;
+}
+
+.nav-button {
+    padding: 10px 20px;
+    border: 1px solid #8b5cf6;
+    border-radius: 9px;
+    color: #c4b5fd;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    background: #8b5cf6;
+    color: white;
+}
+
+/* ===== HERO SECTION ===== */
+
+.hero {
+    min-height: 570px;
+    padding: 85px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    background:
+        radial-gradient(ellipse at 80% 40%, #26164c 0%, transparent 48%),
+        #0b0b16;
+}
+
+.hero-content {
+    max-width: 570px;
+}
+
+.tagline {
+    color: #b69cff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 5vw, 65px);
+    line-height: 1.15;
+    letter-spacing: -2px;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    color: #a78bfa;
+}
+
+.hero-description {
+    color: #aaa6c2;
+    font-size: 16px;
+    max-width: 460px;
+    margin-bottom: 30px;
+}
+
+.primary-button {
+    display: inline-block;
+    padding: 14px 25px;
+    background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: 0 8px 25px #6d28d933;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.primary-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px #8b5cf655;
+}
+
+.small-note {
+    margin-top: 20px;
+    color: #77738f;
+    font-size: 12px;
+}
+
+/* ===== PERFORMANCE PREVIEW CARD ===== */
+
+.typing-card {
+    width: 360px;
+    max-width: 100%;
+    padding: 30px;
+    background: linear-gradient(145deg, #19182b, #121221);
+    border: 1px solid #37304f;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px #00000033;
+}
+
+.card-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #aaa6c2;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #a78bfa;
+    border-radius: 50%;
+    box-shadow: 0 0 12px #a78bfa;
+}
+
+.speed-preview {
+    padding: 35px 0;
+    text-align: center;
+    border-bottom: 1px solid #302d43;
+}
+
+.speed-preview h2 {
+    font-size: 65px;
+    color: #c4b5fd;
+    line-height: 1.2;
+}
+
+.speed-preview h2 span {
+    font-size: 17px;
+    color: #aaa6c2;
+}
+
+.speed-preview p {
+    color: #aaa6c2;
+    font-size: 13px;
+}
+
+.preview-stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 25px 0;
+    text-align: center;
+}
+
+.preview-stats h3 {
+    font-size: 25px;
+    color: #f5f3ff;
+}
+
+.preview-stats p {
+    color: #aaa6c2;
+    font-size: 12px;
+}
+
+.preview-message {
+    padding: 13px;
+    border-radius: 8px;
+    background: #8b5cf61a;
+    color: #c4b5fd;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* ===== FEATURES SECTION ===== */
+
+.features {
+    padding: 85px 10%;
+    background: #10101f;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2,
+.test-section h2,
+.about-section h2 {
+    font-size: clamp(27px, 4vw, 36px);
+    margin-bottom: 12px;
+}
+
+.section-heading > p:last-child,
+.test-section > p:not(.tagline) {
+    color: #aaa6c2;
+    font-size: 14px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.feature-card {
+    padding: 30px 25px;
+    background: #171729;
+    border: 1px solid #292740;
+    border-radius: 15px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    border-color: #8b5cf6;
+}
+
+.feature-icon {
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    background: #8b5cf620;
+    border-radius: 12px;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #aaa6c2;
+    font-size: 14px;
+}
+
+/* ===== TYPING TEST INTRODUCTION ===== */
+
+.test-section {
+    padding: 85px 20px;
+    text-align: center;
+    background: radial-gradient(ellipse at center, #21153f, #0b0b16 70%);
+}
+
+.test-section > p:not(.tagline) {
+    margin-bottom: 25px;
+}
+
+/* ===== ABOUT SECTION ===== */
+
+.about-section {
+    padding: 65px 10%;
+    text-align: center;
+    background: #10101f;
+}
+
+.about-section p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #aaa6c2;
+    font-size: 14px;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+    padding: 25px 15px;
+    text-align: center;
+    background: #0b0b16;
+    border-top: 1px solid #25243d;
+    color: #77738f;
+    font-size: 12px;
+}
+
+/* ===== KEYBOARD ACCESSIBILITY ===== */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #c4b5fd;
+    outline-offset: 4px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 900px) {
+    .navbar {
+        padding: 18px 5%;
+        flex-wrap: wrap;
+    }
+
+    .navbar nav {
+        gap: 18px;
+    }
+
+    .hero {
+        padding: 65px 6%;
+        gap: 35px;
+    }
+
+    .feature-grid {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 650px) {
+    .navbar {
+        justify-content: center;
+    }
+
+    .navbar nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 7%;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .typing-card {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .features {
+        padding: 65px 7%;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-section {
+        padding: 55px 7%;
+    }
+}
+/* ===== INTERACTIVE TYPING TEST ===== */
+
+#typing-area {
+    max-width: 700px;
+    margin: 35px auto 0;
+    padding: 30px;
+    text-align: left;
+    background: #171729;
+    border: 1px solid #8b5cf6;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px #00000033;
+}
+
+#typing-area[hidden] {
+    display: none;
+}
+
+#typing-area h3 {
+    margin-bottom: 15px;
+    color: #c4b5fd;
+    font-size: 22px;
+}
+
+#test-text {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #0b0b16;
+    border: 1px solid #302d43;
+    border-radius: 10px;
+    color: #e4defa;
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+#typing-input {
+    display: block;
+    width: 100%;
+    min-height: 120px;
+    margin-bottom: 22px;
+    padding: 16px;
+    resize: vertical;
+    background: #0b0b16;
+    border: 1px solid #45405e;
+    border-radius: 10px;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+#typing-input:focus {
+    outline: 2px solid #8b5cf6;
+    border-color: transparent;
+}
+
+#typing-input:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+#typing-area > p:not(#test-text) {
+    display: inline-block;
+    margin: 5px 18px 20px 0;
+    color: #c4b5fd;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#typing-area #restart-test {
+    margin-top: 5px;
+}
+
+#typing-area #restart-test:hover {
+    background: linear-gradient(135deg, #a78bfa, #7c3aed);
+}
+
+@media (max-width: 650px) {
+    #typing-area {
+        padding: 20px;
+    }
+
+    #test-text {
+        font-size: 15px;
+    }
+
+    #typing-area > p:not(#test-text) {
+        display: block;
+        margin-bottom: 12px;
+    }
+}
+#results-card {
+    margin-top: 25px;
+    padding: 25px;
+    background: #17152b;
+    border: 1px solid #8b5cf6;
+    border-radius: 18px;
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.15);
+}
+
+#results-card h3 {
+    color: #c4b5fd;
+}
+
+#improvement-tip {
+    margin-top: 20px;
+    padding: 15px;
+    background: #24203d;
+    border-radius: 10px;
+    color: #ddd6fe;
+    line-height: 1.6;
+}
+.timer-track {
+width: 100%;
+height: 10px;
+background: #24203d;
+border-radius: 20px;
+overflow: hidden;
+margin: 12px 0 20px;
+}
+
+#timer-progress {
+width: 100%;
+height: 100%;
+background: linear-gradient(90deg, #8b5cf6, #c4b5fd);
+border-radius: 20px;
+transition: width 1s linear;
+}
+p.test-instructions {
+    color: #c4b5fd  !important;
+    background-color: #17152b  !important;
+    border-left: 4px solid #8b5cf6;
+    padding: 12px 16px;
+    margin: 15px 0;
+    border-radius: 8px;
+    line-height: 1.6;
+    font-size: 14px;
+}
+#typing-feedback {
+    margin: 15px 0;
+    padding: 15px;
+    background: #17152b;
+    border: 1px solid #383052;
+    border-radius: 10px;
+    line-height: 1.8;
+    font-size: 16px;
+    overflow-wrap: anywhere;
+}
+
+.correct-char {
+    color: #4ade80;
+}
+
+.incorrect-char {
+    color: #f87171;
+    background: #4c202d;
+    border-radius: 3px;
+}
+.hero-image {
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 30px auto;
+max-width: 650px;
+}
+
+.hero-image img {
+width: 100%;
+max-width: 600px;
+height: auto;
+border-radius: 20px;
+border: 2px solid #8b5cf6;
+box-shadow: 0 0 25px rgba(139, 92, 246, 0.3);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-image img:hover {
+transform: scale(1.03);
+box-shadow: 0 0 35px rgba(139, 92, 246, 0.5);
+}
+.difficulty-selector {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.difficulty-selector label {
+    color: #c4b5fd;
+    font-weight: 600;
+}
+
+.difficulty-selector select {
+    padding: 10px 16px;
+    background: #17152b;
+    color: #c4b5fd;
+    border: 1px solid #8b5cf6;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+}
+
+.difficulty-selector select:focus {
+    box-shadow: 0 0 12px rgba(139, 92, 246, 0.4);
+}
+/* Achievement Section */
+.achievements-section {
+padding: 60px 20px;
+text-align: center;
+background: linear-gradient(135deg, #0b0b16, #17152b);
+color: #ffffff;
+}
+
+.achievements-section h2 {
+color: #a78bfa;
+font-size: 32px;
+margin-bottom: 12px;
+}
+
+.achievement-subtitle {
+color: #c4b5fd;
+margin-bottom: 35px;
+line-height: 1.6;
+}
+
+.achievement-container {
+display: flex;
+justify-content: center;
+align-items: stretch;
+gap: 25px;
+flex-wrap: wrap;
+max-width: 1100px;
+margin: 0 auto;
+}
+
+.achievement-card {
+background: #17152b;
+border: 1px solid #383052;
+border-radius: 18px;
+padding: 28px 20px;
+width: 250px;
+box-sizing: border-box;
+transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.achievement-card:hover {
+transform: translateY(-8px);
+border-color: #a78bfa;
+box-shadow: 0 10px 30px rgba(139, 92, 246, 0.2);
+}
+
+.badge-icon {
+font-size: 45px;
+margin-bottom: 15px;
+}
+
+.achievement-card h3 {
+color: #a78bfa;
+margin-bottom: 12px;
+}
+
+.achievement-card p {
+color: #d1d5db;
+font-size: 14px;
+line-height: 1.6;
+}
+
+.badge-status {
+display: inline-block;
+margin-top: 12px;
+padding: 8px 14px;
+border-radius: 20px;
+background: #29243d;
+color: #c4b5fd;
+font-size: 13px;
+font-weight: bold;
+}
+
+.badge-status.unlocked {
+background: #243b31;
+color: #86efac;
+border: 1px solid #4ade80;
+}
+
+@media (max-width: 600px) {
+.achievements-section h2 {
+font-size: 26px;
+}
+
+.achievement-card {
+    width: 100%;
+    max-width: 320px;
+}
+
+}
+/* Typing Race Game */
+.race-game {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 30px;
+    text-align: center;
+    background: #151529;
+    border: 1px solid #6d4bc3;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(139, 92, 246, 0.15);
+    color: #ffffff;
+}
+
+.race-game h2 {
+    color: #c4b5fd;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.race-game p {
+    color: #d1d1e8;
+    line-height: 1.6;
+}
+
+.race-track {
+    position: relative;
+    height: 90px;
+    margin: 25px 0;
+    padding: 10px;
+    background: #24243d;
+    border: 2px dashed #8b5cf6;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: left;
+}
+
+#race-car {
+    position: absolute;
+    left: 0;
+    top: 22px;
+    font-size: 35px;
+    transition: left 0.2s ease;
+}
+
+.finish-line {
+    position: absolute;
+    right: 8px;
+    top: 15px;
+    font-size: 42px;
+}
+
+#race-text {
+    font-size: 19px;
+    font-weight: bold;
+    color: #c4b5fd;
+    margin: 20px 0;
+}
+
+#race-input {
+    width: 100%;
+    min-height: 100px;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 1px solid #8b5cf6;
+    border-radius: 12px;
+    background: #0b0b16;
+    color: white;
+    font-size: 16px;
+    resize: vertical;
+}
+
+#race-input:focus {
+    outline: 2px solid #a78bfa;
+}
+
+.race-stats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 15px 0;
+}
+
+.race-game button {
+    padding: 12px 24px;
+    margin: 6px;
+    border: none;
+    border-radius: 10px;
+    background: #8b5cf6;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.race-game button:hover {
+    background: #6d28d9;
+}
+
+@media (max-width: 600px) {
+    .race-game {
+        margin: 25px 12px;
+        padding: 18px;
+    }
+
+    .race-game h2 {
+        font-size: 24px;
+    }
+}
+/* Falling Letters Game */
+.falling-game {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 30px;
+    text-align: center;
+    background: #151529;
+    border: 1px solid #6d4bc3;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(139, 92, 246, 0.15);
+    color: #ffffff;
+}
+
+.falling-game h2 {
+    color: #c4b5fd;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.falling-game p {
+    color: #d1d1e8;
+    line-height: 1.6;
+}
+
+#falling-arena {
+    position: relative;
+    height: 240px;
+    margin: 25px 0;
+    overflow: hidden;
+    background: linear-gradient(180deg, #24243d, #101020);
+    border: 2px solid #8b5cf6;
+    border-radius: 15px;
+}
+
+#falling-letter {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #8b5cf6;
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    box-shadow: 0 0 18px rgba(139, 92, 246, 0.6);
+}
+
+.falling-stats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 15px 0;
+}
+
+#falling-input {
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    padding: 14px;
+    border: 1px solid #8b5cf6;
+    border-radius: 10px;
+    background: #0b0b16;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+#falling-input:focus {
+    outline: 2px solid #a78bfa;
+}
+
+.falling-game button {
+    padding: 12px 24px;
+    margin: 12px 5px;
+    border: none;
+    border-radius: 10px;
+    background: #8b5cf6;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.falling-game button:hover {
+    background: #6d28d9;
+}
+
+@media (max-width: 600px) {
+    .falling-game {
+        margin: 25px 12px;
+        padding: 18px;
+    }
+
+    .falling-game h2 {
+        font-size: 24px;
+    }
+
+    #falling-arena {
+        height: 200px;
+    }
+}
+/* Interactive Typing Tutor */
+#finger-instruction {
+    color: #c4b5fd;
+    font-size: 18px;
+    text-align: center;
+    margin: 15px 0;
+}
+
+#start-lesson {
+    display: block;
+    margin: 15px auto 25px;
+    padding: 12px 24px;
+    background: #8b5cf6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#start-lesson:hover {
+    background: #7c3aed;
+}
+
+.key.target-key {
+    outline: 3px solid #ffffff;
+    box-shadow: 0 0 15px #a78bfa;
+    transform: scale(1.08);
+}
+.lesson-progress {
+    width: 80%;
+    max-width: 500px;
+    height: 12px;
+    background: #25223a;
+    border-radius: 20px;
+    margin: 15px auto;
+    overflow: hidden;
+}
+
+#lesson-progress-bar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #8b5cf6, #c4b5fd);
+    border-radius: 20px;
+    transition: width 0.3s ease;
+}
+
+#lesson-progress-text {
+    text-align: center;
+    color: #c4b5fd;
+    margin-bottom: 20px;
+}
+/* Spacebar Styling */
+.spacebar-key {
+    width: 45%;
+    max-width: 450px;
+    min-width: 220px;
+    height: 48px;
+    margin: 20px auto 8px;
+    background: linear-gradient(90deg, #8b5cf6, #a78bfa);
+    color: white;
+    border: 2px solid #c4b5fd;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    letter-spacing: 3px;
+    box-shadow: 0 0 12px #8b5cf6;
+}
+
+.spacebar-hint {
+    text-align: center;
+    color: #c4b5fd;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+.spacebar-key.target-key {
+    outline: 3px solid white;
+    box-shadow: 0 0 20px #c4b5fd;
+    transform: scale(1.05);
+}
+/* KeySprint Signup Page */
+
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    background: #0b0b16;
+    box-sizing: border-box;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 430px;
+    padding: 35px;
+    background: #151529;
+    border: 1px solid #6d4bc3;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(139, 92, 246, 0.15);
+    color: white;
+    box-sizing: border-box;
+}
+
+.auth-card h1 {
+    text-align: center;
+    color: white;
+    font-size: 32px;
+}
+
+.auth-card h1 span {
+    color: #a78bfa;
+}
+
+.auth-card h2 {
+    text-align: center;
+    color: #c4b5fd;
+    margin-bottom: 10px;
+}
+
+.auth-card > p {
+    text-align: center;
+    color: #d1d1e8;
+}
+
+.auth-card label {
+    display: block;
+    margin: 18px 0 8px;
+    color: #c4b5fd;
+}
+
+.auth-card input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #6d4bc3;
+    border-radius: 9px;
+    background: #0b0b16;
+    color: white;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+.auth-card input:focus {
+    outline: 2px solid #a78bfa;
+}
+
+.auth-card button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 25px;
+    border: none;
+    border-radius: 9px;
+    background: #8b5cf6;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.auth-card button:hover {
+    background: #6d28d9;
+}
+
+.auth-switch {
+    margin-top: 22px;
+}
+
+.auth-card a {
+    color: #a78bfa;
+    text-decoration: none;
+}
+
+.auth-card a:hover {
+    text-decoration: underline;
+}
+
+.back-home {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#signup-message {
+    text-align: center;
+    margin-top: 15px;
+}
+
+@media (max-width: 500px) {
+    .auth-card {
+        padding: 23px;
+    }
+}
+/* Logged-in User Welcome Section */
+
+.user-welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px 20px;
+    margin: 15px auto;
+    background: #151529;
+    border: 1px solid #6d4bc3;
+    border-radius: 12px;
+    max-width: 500px;
+    color: #c4b5fd;
+}
+
+.user-welcome p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#logout-btn {
+    padding: 9px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #8b5cf6;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#logout-btn:hover {
+    background: #6d28d9;
+}
+
+.user-welcome[hidden] {
+    display: none;
+}

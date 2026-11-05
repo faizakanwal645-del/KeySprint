@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Test | KeySprint</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">Key<span>Sprint</span>.</a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="finger-guide.html">Finger Guide</a>
+            <a href="typing-test.html">Typing Test</a>
+            <a href="game-zone.html">Game Zone</a>
+            <a href="features.html">Features</a>
+            <a href="achievements.html">Achievements</a>
+        </nav>
+
+    </header>
+
+    <main>
+        <section class="test-section">
+            <p class="tagline">READY FOR THE CHALLENGE?</p>
+            <h2>Your Typing Journey Starts Here</h2>
+
+            <p>Test your speed, improve accuracy and track your progress.</p>
+
+            <p class="test-instructions">
+                Your time depends on the selected difficulty:
+Easy: 15 seconds, Medium: 60 seconds, Hard: 120 seconds.
+Your speed and accuracy will be calculated automatically.
+            </p>
+
+            <button class="primary-button" id="start-test" type="button">
+                Start Your Test →
+            </button>
+
+            <div id="typing-area" hidden>
+                <div class="difficulty-selector">
+                    <label for="difficulty">Choose Difficulty:</label>
+                    <select id="difficulty">
+                        <option value="easy">Easy</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                   
+                </div>
+
+                <h3>Type the following text:</h3>
+
+                <p id="test-text">
+                    Practice makes progress. Keep learning and improve your typing speed every day.
+                </p>
+
+                <div id="typing-feedback" aria-live="polite"></div>
+
+                <textarea
+                    id="typing-input"
+                    placeholder="Start typing here..."
+                    rows="4"
+                ></textarea>
+
+                <p>Time: <span id="timer">60</span> seconds</p>
+
+                <div class="timer-track">
+                    <div id="timer-progress"></div>
+                </div>
+
+                <p>Speed: <span id="wpm">0</span> WPM</p>
+                <p>Accuracy: <span id="accuracy">100</span>%</p>
+
+                <button id="restart-test" type="button" class="primary-button">
+                    Restart Test
+                </button>
+
+                <div id="results-card" hidden>
+                    <h3>🏆 Your Typing Results</h3>
+
+                    <div class="preview-stats">
+                        <div>
+                            <h3><span id="final-wpm">0</span></h3>
+                            <p>Words Per Minute</p>
+                        </div>
+
+                        <div>
+                            <h3><span id="final-accuracy">0</span>%</h3>
+                            <p>Accuracy</p>
+                        </div>
+
+                        <div>
+                            <h3><span id="final-best">0</span></h3>
+                            <p>Personal Best</p>
+                        </div>
+                    </div>
+
+                    <p id="improvement-tip"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 KeySprint. Practice today, improve tomorrow.</p>
+    </footer>
+
+    <script src="typing-test.js"></script>
+
+</body>
+</html>

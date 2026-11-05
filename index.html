@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KeySprint | Typing Speed Analyzer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#" class="logo">Key<span>Sprint</span>.</a>
+
+        <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="finger-guide.html">Finger Guide</a>
+    <a href="typing-test.html">Typing Test</a>
+    <a href="game-zone.html">Game Zone</a>
+    <a href="features.html">Features</a>
+    <a href="achievements.html">Achievements</a>
+</nav>
+    </header>
+    
+    <!-- Logged-in User Welcome -->
+<div id="user-welcome" class="user-welcome" hidden>
+    <p>Welcome, <span id="user-name"></span>! 👋</p>
+    <button id="logout-btn" type="button">Logout</button>
+</div>
+
+    <main>
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+                <p class="tagline">⚡ YOUR SPEED. YOUR PROGRESS.</p>
+
+                <h1>Type Faster.<br>
+                    <span>Think Smarter.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Test your typing speed, measure your accuracy,
+                    and discover how fast your fingers can go.
+                </p>
+
+                <a href="typing-test.html" class="primary-button">
+                    Start Typing Test →
+                </a>
+
+                <p class="small-note">
+                    Simple practice. Meaningful progress.
+                </p>
+            </div>
+
+            <div class="typing-card">
+                <div class="card-top">
+                    <span class="status-dot"></span>
+                    <span>PERFORMANCE PREVIEW</span>
+                </div>
+
+                <div class="speed-preview">
+                    <h2>72 <span>WPM</span></h2>
+                    <p>Typing Speed</p>
+                </div>
+
+                <div class="preview-stats">
+                    <div>
+                        <h3>98%</h3>
+                        <p>Accuracy</p>
+                    </div>
+
+                    <div>
+                        <h3>00:30</h3>
+                        <p>Time</p>
+                    </div>
+                </div>
+
+                <p class="preview-message">
+                    ✨ Every keystroke makes you better.
+                </p>
+            </div>
+            <div class="hero-image">
+    <img src="images/keyboard.jpeg" alt="Purple RGB keyboard for typing practice">
+</div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 KeySprint. Practice today, improve tomorrow.</p>
+    </footer>
+
+    <script src="auth.js"></script> 
+</body>
+</html>
